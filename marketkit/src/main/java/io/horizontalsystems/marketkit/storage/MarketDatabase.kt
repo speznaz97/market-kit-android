@@ -92,6 +92,7 @@ abstract class MarketDatabase : RoomDatabase() {
                 }
             } catch (error: Exception) {
                 logger.warning("Error in loadInitialCoins(): ${error.message ?: error.javaClass.simpleName}")
+                Log.e("fuck","Error in loadInitialCoins(): ${error.message ?: error.javaClass.simpleName}")
             }
 
             return insertCount
