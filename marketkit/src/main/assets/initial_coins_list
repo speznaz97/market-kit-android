@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS `BlockchainEntity` (`uid` TEXT NOT NULL, `name` TEXT NOT NULL, `eip3091url` TEXT, PRIMARY KEY(`uid`));
 CREATE TABLE IF NOT EXISTS `Coin` (`uid` TEXT NOT NULL, `name` TEXT NOT NULL, `code` TEXT NOT NULL, `marketCapRank` INTEGER, `coinGeckoId` TEXT, PRIMARY KEY(`uid`));
 CREATE TABLE IF NOT EXISTS `TokenEntity` (`coinUid` TEXT NOT NULL, `blockchainUid` TEXT NOT NULL, `type` TEXT NOT NULL, `decimals` INTEGER, `reference` TEXT NOT NULL, PRIMARY KEY(`coinUid`, `blockchainUid`, `type`, `reference`), FOREIGN KEY(`coinUid`) REFERENCES `Coin`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE , FOREIGN KEY(`blockchainUid`) REFERENCES `BlockchainEntity`(`uid`) ON UPDATE NO ACTION ON DELETE CASCADE )
+INSERT INTO TokenEntity VALUES('morfey','polygon-pos','eip20',18,'0x81c2e4b41309ee8b575c4217a9b17acee6451075');
 INSERT INTO BlockchainEntity VALUES('swagbucks','SwagBucks',null);
 INSERT INTO BlockchainEntity VALUES('tuxcoin','Tuxcoin',null);
 INSERT INTO BlockchainEntity VALUES('moneta','Moneta',null);
@@ -1230,7 +1231,6 @@ INSERT INTO TokenEntity VALUES('aave','huobi-token','huobi-token',null,'0x202b49
 INSERT INTO TokenEntity VALUES('aave','ethereum','eip20',18,'0x7fc66500c84a76ad7e9c93437bfc5ac33e2ddae9');
 INSERT INTO TokenEntity VALUES('aave','avalanche','eip20',18,'0x63a72806098bd3d9520cc43356dd78afe5d386d9');
 INSERT INTO TokenEntity VALUES('aave','polygon-pos','eip20',18,'0xd6df932a45c0f255f85145f286ea0b292b21c90b');
-INSERT INTO TokenEntity VALUES('morfey','polygon-pos','eip20',18,'0x81c2e4b41309ee8b575c4217a9b17acee6451075');
 INSERT INTO TokenEntity VALUES('0x','harmony-shard-0','harmony-shard-0',null,'0x8143e2a1085939caa9cef6665c2ff32f7bc08435');
 INSERT INTO TokenEntity VALUES('0x','avalanche','eip20',18,'0x596fa47043f99a4e0f122243b841e55375cde0d2');
 INSERT INTO TokenEntity VALUES('0x','ethereum','eip20',18,'0xe41d2489571d322189246dafa5ebde1f4699f498');
