@@ -10794,6 +10794,7 @@ INSERT INTO Coin VALUES('dao-invest','DAO Invest','VEST',null,'dao-invest');
 INSERT INTO Coin VALUES('deez-nuts','Deez Nuts','DEEZNUTS',null,null);
 INSERT INTO Coin VALUES('dawg','DAWG','DAWG',null,'dawg');
 INSERT INTO Coin VALUES('cryptogcoin','Cryptogcoin','CRG',null,'cryptogcoin');
+INSERT INTO Coin VALUES('morfey','MORFEY COIN','MORFEY',null,null);
 INSERT INTO Coin VALUES('cyberfm','CyberFM','CYFM',null,'cyberfm');
 INSERT INTO Coin VALUES('crypto-gladiator-shards','Crypto Gladiator Shards','CGS',940,'crypto-gladiator-shards');
 INSERT INTO Coin VALUES('daddyusdt','DaddyUSDT','DADDYUSDT',null,null);
